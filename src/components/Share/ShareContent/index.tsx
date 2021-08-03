@@ -8,6 +8,9 @@ export default function ShareContent() {
   function handleCopyCode() {
     navigator.clipboard.writeText(token);
     setCopied(true);
+    setInterval(() => {
+      setCopied(false);
+    }, 4000);
   }
 
   return (
